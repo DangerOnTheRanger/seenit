@@ -1,12 +1,12 @@
 {{ define "title" }}Upload{{ end }}
 {{ define "content" }}
-h1 class="mc-raised-large">seenit</h1>
+<h1 class="mc-raised-large">seenit</h1>
 <p>
 	Alright, let's see if you're about to post something new to <b>{{ .Community }}</b>.
 </p>
-<form action="/result" class="form-container">
+<form action="/result" class="form-container" enctype="multipart/form-data" method="post">
 	<label for="image" class="mc-raised image-label">Select an image</label>
-	<input type="file" accept="image/*" name="image" onchange="loadFile(event)">
+	<input type="file" accept="image/*" name="image" id="image" onchange="loadFile(event)">
 	<input type="hidden" name="community" value="{{ .Community }}">
 	<input type="submit" value="Submit">
 </form>
