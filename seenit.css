@@ -1,0 +1,96 @@
+body {
+	font-family: "Padauk", sans-serif;
+}
+
+h1 {
+	font-size: 5em;
+	margin-bottom: 1em;
+	border-radius: 25px;
+	text-align: center;
+}
+
+@media screen and (min-device-width: 1200px) {
+	.content {
+		margin:auto;
+		max-width: 55%;
+	}
+}
+
+@media screen and (min-device-width: 768px) {
+	.progress-container {
+		width: 50%;
+	}
+
+	form {
+		width: 75%;
+	}
+
+	#community {
+		width: 50ch;
+	}
+
+	input[type="submit"] {
+		margin-top: 0;
+	}
+}
+
+label {
+	font-weight: bold;
+}
+
+footer {
+	font-size: 0.75em;
+	text-align: center;
+	margin-top: 1em;
+}
+
+input[type="file"] {
+    display: none;
+}
+
+input[type="submit"] {
+	font-weight: bold;
+	margin-top: 1em;
+	margin-left: 1em;
+}
+
+.image-label {
+	margin-right: 1em;
+	padding: 15px;
+	border-radius: var(--mc-border-rounded);
+	cursor: pointer;
+	font-weight: normal;
+}
+
+.image-preview-container {
+	max-width: 50%;
+	display: block;
+	padding: 1em;
+	margin: auto;
+	margin-top: 1em;
+	margin-bottom: 1em;
+	border-radius: var(--mc-border-rounded);
+}
+
+.image-preview {
+	display: block;
+	margin: auto;
+	padding: 1em;
+	max-width: 85%;
+	min-height: 10em;
+}
+
+.progress-container {
+	display: block;
+	margin: auto;
+	margin-top: 1em;
+	margin-bottom: 1em;
+	text-align: center;
+}
+
+form {
+	display: block;
+	padding: 1em;
+	margin: auto;
+	text-align: center;
+}

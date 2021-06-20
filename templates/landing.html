@@ -1,0 +1,14 @@
+{{ define "title" }}Home{{ end }}
+
+{{ define "content" }}
+<h1 class="mc-raised-large">seenit</h1>
+<p>
+	Welcome to <b>seenit</b>! This is your first time here (or maybe you cleared your cookies) &mdash;
+	punch in the name of your community or groupchat, and let's get to repost-screening.
+</p>
+<form action="/upload">
+	<label for="community">Community</label>
+	<input type="text" name="community">
+	<input type="submit" value="Submit">
+</form>
+{{ end }}

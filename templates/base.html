@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>{{ template "title" . }} - seenit.app</title>
+		<meta charset=utf-8>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="https://dangerontheranger.github.io/morphy-css/morphy.css">
+		<link rel="preconnect" href="https://fonts.gstatic.com">
+		<link href="https://fonts.googleapis.com/css2?family=Padauk:wght@400;700&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="seenit.css">
+	</head>
+	<body>
+		<section class="content">
+			<section class="main">
+				{{ template "content" . }}
+			</section>
+			<footer>
+				<span>Made in anger by <a href="https://github.com/DangerOnTheRanger/">Kermit Alexander II</a>.</span>
+				<br />
+				<span>Think the site's style looks cool? Check out <a href="https://github.com/DangerOnTheRanger/morphy-css">Morphy.css</a>. (I made that too.)</span>
+			</footer>
+		</section>
+	</body>
+</html>
