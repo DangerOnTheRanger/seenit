@@ -30,7 +30,6 @@ func RecordHash(community string, hash string, db Database) error {
 	return bucket.Put(hash, seenMarker)
 }
 
-
 func ImageToHash(img image.Image) (string, error) {
 	coloredResized := image.NewRGBA(image.Rect(0, 0, 8, 8))
 	draw.NearestNeighbor.Scale(coloredResized, coloredResized.Rect, img, img.Bounds(), draw.Over, nil)

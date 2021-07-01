@@ -1,6 +1,5 @@
 package seenit
 
-
 type Database interface {
 	GetBucket(name string) (Bucket, error)
 }
@@ -11,9 +10,8 @@ type Bucket interface {
 	Put(key string, val string) error
 }
 
-
 type MockDatabase struct {
-	Buckets map[string]MockBucket 
+	Buckets map[string]MockBucket
 }
 
 func (d *MockDatabase) GetBucket(name string) (Bucket, error) {

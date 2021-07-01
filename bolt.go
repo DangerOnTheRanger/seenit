@@ -10,7 +10,7 @@ type BoltDatabase struct {
 
 type BoltBucket struct {
 	boltDb *bolt.DB
-	name string
+	name   string
 }
 
 func NewBoltDatabase(filename string) (*BoltDatabase, error) {
@@ -21,7 +21,6 @@ func NewBoltDatabase(filename string) (*BoltDatabase, error) {
 	d := BoltDatabase{boltDb: db}
 	return &d, nil
 }
-
 
 func (d *BoltDatabase) GetBucket(name string) (Bucket, error) {
 	var bucket BoltBucket
@@ -48,7 +47,7 @@ func (b *BoltBucket) Has(key string) (bool, error) {
 	found := false
 	err := b.boltDb.View(func(tx *bolt.Tx) error {
 		bkt := tx.Bucket([]byte(b.name))
-		if bkt.Get([]byte(key)) != nil{
+		if bkt.Get([]byte(key)) != nil {
 			found = true
 		}
 		return nil

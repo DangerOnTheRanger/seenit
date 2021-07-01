@@ -1,10 +1,10 @@
 package main
 
 import (
+	"github.com/DangerOnTheRanger/seenit"
+	"github.com/gorilla/mux"
 	"log"
 	"net/http"
-	"github.com/gorilla/mux"
-	"github.com/DangerOnTheRanger/seenit"
 )
 
 const (

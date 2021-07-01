@@ -1,9 +1,9 @@
 package seenit
 
 import (
+	"image/png"
 	"os"
 	"testing"
-	"image/png"
 )
 
 func TestHaveSeen(t *testing.T) {

@@ -17,7 +17,7 @@ type Handler func(db Database, w http.ResponseWriter, r *http.Request)
 type BoundHandler func(w http.ResponseWriter, r *http.Request)
 
 func BindHandler(h Handler, db Database) BoundHandler {
-	return func (w http.ResponseWriter, r *http.Request) {
+	return func(w http.ResponseWriter, r *http.Request) {
 		h(db, w, r)
 	}
 }
@@ -45,7 +45,6 @@ func ServeLanding(w http.ResponseWriter, r *http.Request) {
 		// TODO: how to handle errors?
 	}
 }
-
 
 func ServeUpload(w http.ResponseWriter, r *http.Request) {
 	community := r.FormValue("community")
@@ -81,7 +80,7 @@ func ServeUpload(w http.ResponseWriter, r *http.Request) {
 		}
 		expiration := time.Now().AddDate(1, 0, 0)
 		http.SetCookie(w, &http.Cookie{Name: commCookieName,
-			Value: base64.StdEncoding.EncodeToString(serializedComms),
+			Value:   base64.StdEncoding.EncodeToString(serializedComms),
 			Expires: expiration,
 		})
 	}
@@ -90,7 +89,6 @@ func ServeUpload(w http.ResponseWriter, r *http.Request) {
 		// TODO: how to handle errors?
 	}
 }
-
 
 func ServeResult(db Database, w http.ResponseWriter, r *http.Request) {
 	file, _, err := r.FormFile("image")

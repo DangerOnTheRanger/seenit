@@ -7,12 +7,12 @@ import (
 )
 
 const (
-	templateDir = "templates"
-	baseTemplate = "base.html"
+	templateDir     = "templates"
+	baseTemplate    = "base.html"
 	landingTemplate = "landing.html"
-	uploadTemplate = "upload.html"
-	seenTemplate = "seen.html"
-	unseenTemplate = "unseen.html"
+	uploadTemplate  = "upload.html"
+	seenTemplate    = "seen.html"
+	unseenTemplate  = "unseen.html"
 )
 
 func buildTemplate(filename string) *template.Template {
