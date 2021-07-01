@@ -36,7 +36,7 @@ func ServeLanding(w http.ResponseWriter, r *http.Request) {
 	var communities []Community
 	decodedComms, err := base64.StdEncoding.DecodeString(commCookieJson)
 	if err != nil {
-		// TODO: how to handle erros?
+		// TODO: how to handle errors?
 		return
 	}
 	json.Unmarshal(decodedComms, &communities)
@@ -61,7 +61,7 @@ func ServeUpload(w http.ResponseWriter, r *http.Request) {
 	var communities []Community
 	decodedComms, err := base64.StdEncoding.DecodeString(commCookieJson)
 	if err != nil {
-		// TODO: how to handle erros?
+		// TODO: how to handle errors?
 		return
 	}
 	json.Unmarshal(decodedComms, &communities)
