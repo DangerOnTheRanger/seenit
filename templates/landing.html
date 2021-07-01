@@ -2,10 +2,22 @@
 
 {{ define "content" }}
 <h1 class="mc-raised-large">seenit</h1>
+{{ if .Communities }}
+<p>
+	Welcome back to <b>seenit</b>! These are the communities you've visited previously. You can also
+	enter the name of a new community a bit further below.
+</p>
+<ul>
+	{{ range .Communities }}
+	<li><a href="/upload?community={{ .Name }}">{{ .Name }}</a></li>
+	{{ end }}
+</ul>
+{{ else }}
 <p>
 	Welcome to <b>seenit</b>! This is your first time here (or maybe you cleared your cookies) &mdash;
 	punch in the name of your community or groupchat, and let's get to repost-screening.
 </p>
+{{ end }}
 <form action="/upload">
 	<label for="community">Community</label>
 	<input type="text" name="community">

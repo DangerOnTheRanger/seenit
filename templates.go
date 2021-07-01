@@ -21,10 +21,14 @@ func buildTemplate(filename string) *template.Template {
 	return template.Must(template.ParseFiles(baseTemplatePath, fullPath))
 }
 
-func RenderLanding(w io.Writer) error {
+func RenderLanding(communities []Community, w io.Writer) error {
 	landing := buildTemplate(landingTemplate)
-	// TODO: add cookie functionality for saving community names
-	return landing.ExecuteTemplate(w, baseTemplate, nil)
+	data := struct {
+		Communities []Community
+	}{
+		Communities: communities,
+	}
+	return landing.ExecuteTemplate(w, baseTemplate, data)
 }
 
 func RenderUpload(community string, w io.Writer) error {
