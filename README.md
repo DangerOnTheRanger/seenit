@@ -21,8 +21,9 @@ enough was enough, and needed a project to show off my [neumorphic CSS library](
 # Building
 
 The included `Dockerfile` is the intended way to go about doing things. For persisting
-information (seen hashes, etc.), there will be a `database.db` file in the container that
-you can mount and save.
+information (seen hashes, etc.), there will be a `/seenit/storage/database.db` file in the container that
+you can mount and save. You can also change the directory and filename of the database by setting
+the `SEENIT_DATABASE_PATH` environment variable, which is set by default to the aforementioned path.
 
 # License
 

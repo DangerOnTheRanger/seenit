@@ -15,5 +15,7 @@ FROM gcr.io/distroless/base:latest
 WORKDIR /seenit
 COPY --from=builder /go/src/seenit/cmd/seenit ./seenit
 COPY templates/ templates/
-
+WORKDIR /seenit/storage
+WORKDIR /seenit
+ENV SEENIT_DATABASE_PATH=/seenit/storage/database.db
 CMD ["/seenit/seenit"]
